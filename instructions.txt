@@ -1,0 +1,39 @@
+### Dentro de la carpeta del proyecto a realizar 
+npm init
+
+### Instalación de paquetes 
+npm i cors dotenv express mongoose validator 
+ - cors: Este paquete proporciona un middleware de Express para habilitar CORS (Cross-Origin Resource Sharing)
+ - dotenv: Este paquete permite cargar variables de entorno desde un archivo .env en el entorno de la aplicación Node.js.
+ - express: Este es un marco de aplicación web para Node.js.
+ - mongoose: Este paquete es una biblioteca de modelado de objetos de MongoDB para Node.js. (realizar operaciones CRUD de manera fácil y eficiente.)
+ - validator: Este paquete proporciona funciones de validación para datos de entrada en Node.js. 
+
+### Modificaciones archivo package.json
+  "type": "module",
+  - indica que el proyecto utiliza módulos de ECMAScript (ES6) permite usar (import y export) adicionales a los módulos CommonJS (require y module.exports)
+  "scripts": {
+    "start": "node server.js", #- cuando se ejecuta el comando npm start en producción 
+    "dev": "nodemon server.js" #- cuando se ejecuta el comando npm run dev con nodemon no es necesario reiniciar el servidor cada vez que se modifican los archivos
+   },
+  
+### Carpeta config
+config.env (Para variables de entorno del servidor, en este caso con mongodb)
+
+### app.js
+ - Importar bibliotecas y middleware 
+ - Crear las instancias y el .use 
+
+### server.js
+ - Creación del servidor
+
+### Carpeta y archivo ./database/dbConnection.js
+  - Establece la función para los mensajes en consola de acuerdo a conexión exitosa o fallida con la base de datos en este caso MongoDB
+  - Se importa y se llama la función en el archivo app.js
+
+### Carpeta y archivo ./error/error.js
+  - Establece la clase y la función para errores predeterminados
+  - Se importa y se llama la función para errores
+
+### Carpeta y archivos routes "rutas"
+  -

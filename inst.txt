@@ -36,4 +36,13 @@ config.env (Para variables de entorno del servidor, en este caso con mongodb)
   - Se importa y se llama la función para errores
 
 ### Carpeta y archivos routes "rutas"
-  -
+  - crea el enrutador de express
+
+### Carpeta models
+  - Se define el esquema de Mongoose con la estructura de datos y validacion de campos obligatorios
+
+### Carpeta controller
+  - Comprueba y controla que los campos de el formulario de reservación estén correctos o en su defecto mostrara error usando el ErrorHandler de error.js
+
+### router.post - Archivo reservationRout.js
+  - Se crea la solicitud .post usando  la función sendReservation del archivo reservation de la carpeta controller

@@ -44,5 +44,8 @@ config.env (Para variables de entorno del servidor, en este caso con mongodb)
 ### Carpeta controller
   - Comprueba y controla que los campos de el formulario de reservación estén correctos o en su defecto mostrara error usando el ErrorHandler de error.js
 
-### router.post - Archivo reservationRout.js
-  - Se crea la solicitud .post usando  la función sendReservation del archivo reservation de la carpeta controller
+### Carpeta routes --> reservationRoute.js
+  - Agregar la solicitud post con el middleware sendReservation
+
+### Crear una solicitud HTTP (POST) en postman
+  - Para enviar la reservación a mongodb

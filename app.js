@@ -3,8 +3,7 @@ import cors from "cors"; // importa el middleware cors  (Cross-Origin Resource S
 import dotenv from "dotenv"; // biblioteca que permite cargar variables desde un archivo .env
 import { dbConnection } from "./database/dbConnection.js"; // importa la función de conexión con la base de datos
 import { errorMiddleware } from "./error/error.js"; // importa la función de la carpeta error para el uso de errores predeterminados como respuestas http
-import reservationRouter from "./routes/reservationRoute.js"
-
+import reservationRouter from "./routes/reservationRoute.js";
 
 const app = express(); // crea la instancia de la aplicación app
 dotenv.config({ path: "./config/config.env" }); // con el metodo config() carga las variables de entorno del archivo .env según la ruta especificada
@@ -19,7 +18,7 @@ app.use(
 
 app.use(express.json()); // habilita el middleware para lectura en formato json (Lo convierte en un objeto de javascript) accesible en el objeto "req.body"
 app.use(express.urlencoded({ extended: true })); // Middleware que permite que express pueda trabajar con datos enviados desde un formulario HTML
-app.use("/api/v1/reservation", reservationRouter)
+app.use("/api/v1/reservation", reservationRouter);
 
 dbConnection(); // llamado a la función de conexión con el servidor
 

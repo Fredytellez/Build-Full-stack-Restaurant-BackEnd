@@ -12,7 +12,7 @@ app.use(
   cors({
     origin: [process.env.FRONTEND_URL], // establece el origen permitido para las solicitudes, en este caso usa la variable de entorno FRONTEND_URL
     methods: ["POST"], // Especifica el metodo HTTP permitido para la solicitud CORS
-    credentials: [true], // Habilita el intercambio de de cookies(credenciales) entre el servidor y el cliente
+    credentials: true, // Habilita el intercambio de de cookies(credenciales) entre el servidor y el cliente
   })
 );
 

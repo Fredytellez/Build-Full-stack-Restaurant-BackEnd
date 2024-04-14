@@ -4,6 +4,8 @@ import ErrorHandler from "../error/error.js";
 import { Reservation } from "../models/reservationSchema.js"; // importa el modelo Reservation de reservationSchema
 
 export const sendReservation = async (req, res, next) => {
+console.log(process.env.FRONTEND_URL)
+
   //  tres argumentos: req (la solicitud), res (la respuesta) y next (la función de middleware siguiente en la cadena).
   const { firstName, lastName, email, phone, date, time } = req.body; // datos necesarios para el cuerpo de la solicitud
   if (!firstName || !lastName || !email || !phone || !date || !time) {
